@@ -1,10 +1,12 @@
 # Indonesian DistilBERT Base fine-tuned on Translated Squad v2.0
 
-This repo was forked from [rifkybujana](https://github.com/rifkybujana)'s [IndoBERT-QA](https://github.com/rifkybujana/IndoBERT-QA) for its excellent notebook presentation. Both this repo and IndoBERT-QA has the same task and was trained on the same [Translated SQuAD 2.0](https://github.com/Wikidepia/indonesian_datasets/tree/master/question-answering/squad) for **Extractive Q&A** downstream task.
+This repo was forked from [rifkybujana](https://github.com/rifkybujana)'s [IndoBERT-QA](https://github.com/rifkybujana/IndoBERT-QA) for its notebook presentation. Both this repo and IndoBERT-QA has the same task and was trained on the same [Translated SQuAD 2.0](https://github.com/Wikidepia/indonesian_datasets/tree/master/question-answering/squad) for **Q&A** downstream task.
 
 The difference lies in the underlying pretrained model in which IndoBERT-QA uses [IndoBERT](https://huggingface.co/indolem/indobert-base-uncased) trained by [IndoLEM](https://indolem.github.io/) whereas this repo uses [Indonesian DistilBERT base](https://huggingface.co/cahya/distilbert-base-indonesian) by [cahya](https://huggingface.co/cahya).
 
-**Model Size** (after training): XXmb
+**Model Size** (after training): 270mb
+
+ 🤗 [distilbert-indonesian-squad](https://huggingface.co/boimbukanbaim/distilbert-indonesian-squad)
 
 ## Details of Indonesian DistilBERT base (from their documentation)
 
@@ -23,16 +25,16 @@ SQuAD2.0 combines the 100,000 questions in SQuAD1.1 with over 50,000 unanswerabl
 
 ## Model Training
 
-The model was trained on Kaggle with poorman's GPU and 12GB of RAM.
+The model was trained on Kaggle's T4 GPU x2 and 13GB of RAM.
 
-## Results:
+<!-- ## Results:
 
 | Metric | # Value   |
 | ------ | --------- |
 | **EM** | **51.61** |
-| **F1** | **69.09** |
+| **F1** | **69.09** | -->
 
-## Simple Usage (Using Huggingface)
+## Simple Usage (Using 🤗 Pipeline)
 
 ```py
 from transformers import pipeline
@@ -53,7 +55,7 @@ qa_pipeline({
     
     Konsep turunan fungsi yang universal banyak digunakan dalam berbagai cabang matematika maupun bidang ilmu yang lain. Dalam bidang ekonomi, turunan digunakan untuk menghitung biaya marginal, total penerimaan, dan biaya produksi. Bidang biologi menggunakan turunan untuk menghitung laju pertumbuhan mikroorganisme, dalam bidang fisika untuk menghitung kepadatan kawat, dalam bidang kimia untuk menghitung laju pemisahan, dalam bidang geografi untuk menghitung laju pertumbuhan penduduk, dan masih banyak lagi.
     """,
-    'question': "Apa itu turunan?"
+    'question': "Apa itu derivatif?"
 })
 ```
 
