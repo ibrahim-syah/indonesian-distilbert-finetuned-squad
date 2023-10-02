@@ -27,12 +27,12 @@ SQuAD2.0 combines the 100,000 questions in SQuAD1.1 with over 50,000 unanswerabl
 
 The model was trained on Kaggle's T4 GPU x2 and 13GB of RAM.
 
-<!-- ## Results:
+## Results:
 
 | Metric | # Value   |
 | ------ | --------- |
-| **EM** | **51.61** |
-| **F1** | **69.09** | -->
+| **EM** | **51.00** |
+| **F1** | **68.92** |
 
 ## Simple Usage (Using 🤗 Pipeline)
 
